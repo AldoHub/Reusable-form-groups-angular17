@@ -1,0 +1,21 @@
+<div>
+    
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-field">
+        <label for="displayName">Display Name</label>
+        <input formControlName="displayName" type="text" id="displayName">
+      </div>
+      
+      <!-- address fields component -->
+      <!-- controlKey allows a renaming for the fields group in order to make it dynamic -->
+      <app-address label="Delivery Address" controlKey="deliveryAddress"></app-address>
+      <app-address label="Billing Address" controlKey="billingAddress"></app-address>
+     
+     <!--
+      <app-address-group label="Delivery Address" controlKey="deliveryAddress"></app-address-group>
+      <app-address-group label="Billing Address" controlKey="billingAddress"></app-address-group>
+      -->
+
+      <button>Submit</button>
+    </form>
+</div>
